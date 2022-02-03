@@ -1,0 +1,50 @@
+/*tabuleiro em div*/
+
+.tabuleiro {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+}
+#black {
+  margin: 1px;
+  float: left;
+  width: 70px;
+  height: 70px;
+  background-color: black;
+}
+#grey {
+  margin: 1px;
+  float: left;
+  width: 70px;
+  height: 70px;
+  background-color: rgb(199, 198, 198);
+}
+
+/*tabuleiro table*/
+
+.tab-tabuleiro {
+    border: none;
+    width: 300px;
+    height: 300px;
+}
+.tr-black td:nth-child(odd) /*alternar as cores*/{
+    background-color: black;
+    height: 70px;
+}
+.tr-black td:nth-child(even) {
+    background-color: rgb(199, 198, 198);
+    height: 70px;
+}
+.tr-grey td:nth-child(odd) {
+    background-color: rgb(199, 198, 198);
+    height: 70px;
+}
+.tr-grey td:nth-child(even) {
+    background-color: black;
+    height: 70px;
+}
+
+
+td {
+    border: none;
+}
