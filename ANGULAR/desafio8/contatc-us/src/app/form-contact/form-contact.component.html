@@ -1,0 +1,56 @@
+<div class="img" alt="Imagem fundo roxo com icones envelopes">
+  <img src="assets/img/image.png" alt="" />
+</div>
+
+<div class="container-form">
+  <div class="article-form">
+    <h1>CONTACT US</h1>
+    <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus odio,sequi nulla quasi id minus dolor corporis non a dignissimos.</P>
+  </div>
+  <hr aria-hidden="" />
+
+  <form #f="ngForm" [formGroup]="formContact" (ngSubmit)="onSubmit(); formContact.reset()">
+    <div class="mb-3">
+      <label class="icon"
+        ><i class="fa fa-user-o" aria-hidden="true"></i
+      ></label>
+      <input
+        type="name"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="Seu nome"
+        formControlName="nome"
+      />
+      <span *ngIf="formContact.get('nome')?.invalid && !formContact.get('nome')?.pristine">Nome é obrigatório</span>
+    </div>
+
+    <div class="mb-3">
+      <label class="icon" for="email"
+        ><i class="fa fa-envelope-o" aria-hidden="true"></i
+      ></label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="name@example.com"
+        formControlName="email"
+      />
+      <span *ngIf="formContact.get('email')?.invalid && !formContact.get('email')?.pristine">E-mail é obrigatório</span>
+    </div>
+
+    <div class="mb-3">
+      <label class="icon" for="text"
+        ><i class="fa fa-comment-o" aria-hidden="true"></i
+      ></label>
+      <textarea
+        class="form-control"
+        id="exampleFormControlTextarea1" 
+        rows="3"
+        placeholder="Mensagem"
+        formControlName="message"
+      ></textarea>
+      <span *ngIf="formContact.get('message')?.invalid && !formContact.get('message')?.pristine">Texto é obrigatório</span>
+    </div>
+    <button class="btn btn-lg" [disabled]="!f.valid" disabled>ENVIAR</button>
+  </form>
+</div>
