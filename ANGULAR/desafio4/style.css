@@ -1,0 +1,104 @@
+body, ul {
+    margin: 0px;
+    padding: 0px;
+}
+a {  
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+  }
+#logo {
+    font-weight: bold;
+}
+
+#header {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 1rem;
+	border: 1px solid #ccc;
+    justify-content: space-between;
+}
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem; /*aumentar área de contato entre os links (espaço)*/
+}
+#menu a {
+    display: block;
+    padding: .5rem;
+}
+#btn-mobile {
+    display: none;
+    cursor: pointer;
+}
+
+
+/*DESAFIO4 B */
+@media (max-width: 600px) {
+
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 50vw;
+        top: 68px;
+        right: 0;
+        height: calc(100vh - 68px);
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #ccc;
+        transition: .5s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: auto;
+    }
+    
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+    }
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        text-align: center;
+    }
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    #hamburguer {
+        border-top: 2px solid;
+        width: 25px;
+        display: block;
+    }
+    #hamburguer:after, #hamburguer:before {
+        content: '';
+        display: block;
+        width: 25px;
+        height: 2px;
+        background-color: black;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    #nav.active #hamburguer {
+        border-top-color: transparent;
+    }
+    #nav.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+    #nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+
+
+
+
