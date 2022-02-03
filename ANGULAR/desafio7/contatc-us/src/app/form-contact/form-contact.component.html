@@ -1,0 +1,55 @@
+<div class="img">
+  <img src="assets/img/image.png" alt="" />
+</div>
+<div class="container-form">
+  <article>
+    <h1>CONTACT US</h1>
+    <P
+      >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus odio,
+      sequi nulla quasi id minus dolor corporis non a dignissimos.</P
+    >
+  </article>
+  <hr aria-hidden="" />
+
+  <form #f="ngForm" [formGroup]="formContact" (ngSubmit)="onSubmit(); formContact.reset()">
+    <div class="form-group">
+      <label class="icon"
+        ><i class="fa fa-user-o" aria-hidden="true"></i
+      ></label>
+      <input
+        type="name"
+        class="form-control"
+        placeholder="Your Name"
+        formControlName="nome"
+      />
+    </div>
+
+    <div class="form-group">
+      <label class="icon" for="email"
+        ><i class="fa fa-envelope-o" aria-hidden="true"></i
+      ></label>
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Your Subject"
+        formControlName="email"
+      />
+    </div>
+
+    <div class="form-group">
+      <label class="icon" for="text"
+        ><i class="fa fa-comment-o" aria-hidden="true"></i
+      ></label>
+      <textarea
+        class="form-control"
+        id="text"
+        cols="30"
+        rows="10"
+        placeholder="Your Message"
+        formControlName="message"
+        
+      ></textarea>
+    </div>
+    <button class="btn btn-lg" [disabled]="!f.valid" disabled>START CHAT</button>
+  </form>
+</div>

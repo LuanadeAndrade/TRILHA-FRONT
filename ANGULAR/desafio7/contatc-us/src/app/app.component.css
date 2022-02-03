@@ -1,0 +1,30 @@
+
+.navbar-brand {
+  color: rgb(160, 38, 129);
+  margin-right: 50px;
+}
+
+ul, li, .nav-link {
+  gap: 2.5rem;
+}
+
+.nav-link {
+  color: rgb(43, 168, 226);
+  font-weight: bolder;
+}
+
+.btn-login {
+  width: 70px;
+  margin-top: 6px;
+  background: none;
+  color: rgb(160, 38, 129);
+  border-color: rgb(160, 38, 129);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.navbar-toggler{
+  color: rgb(160, 38, 129);
+}
+
+
