@@ -1,0 +1,61 @@
+body {
+    background: rgb(253, 252, 252);
+}
+
+h1, h2, h3, p {
+    margin-left: 2%;
+}
+.article {
+    width: 90%;
+    height: 60%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background: rgb(194, 193, 193);
+}
+
+/*GRID*/
+.container {
+    height: auto;
+    width: auto;
+    
+    display: grid;
+    grid-gap: 3% 1%;
+    grid-template-rows: 26% 26% 100% 32%;
+    grid-template-columns: 70% 29%;
+    grid-template-areas: "header header"
+                          "nav nav"
+                          "section aside"
+                          "footer footer" 
+}
+.header {
+    background: rgb(221, 217, 217);
+    grid-area: header;
+}
+.nav {
+    background: rgb(221, 217, 217);
+    grid-area: nav;
+}
+.section {
+    background: rgb(221, 217, 217);
+    grid-area: section;
+}
+.aside {
+    background: rgb(221, 217, 217);
+    grid-area: aside;
+}
+.footer {
+    background: rgb(221, 217, 217);
+    grid-area: footer;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        height: auto;
+        width: auto;
+        grid-template-areas: "header" "nav" "section" "aside" "footer";
+        grid-template-rows: 20% 20% 60% 30% 20%;
+        grid-template-columns: 1fr;
+    }
+    
+}
