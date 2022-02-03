@@ -1,0 +1,15 @@
+
+thead {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+figure {
+    margin: 0;
+}
+img {
+    max-width: 140px;
+    max-height:140px;
+    padding: 0;
+    width: auto;
+    height: auto;
+}
